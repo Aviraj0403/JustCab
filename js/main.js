@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const whatsAppMessage = `*New Booking Enquiry*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Travel Date:* ${travelDate}%0A*Trip Type:* ${tripType}%0A*Message:* ${message || 'N/A'}`;
             
             // Get admin phone (replace with your number)
-            const adminPhone = "911234567890";  // Replace with your number with country code
+            const adminPhone = "916200594193";  // Replace with your number with country code
             
             // Create WhatsApp link directly
             const whatsappUrl = `https://wa.me/${adminPhone}?text=${whatsAppMessage}`;
