@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100" height="100">
+  <style>
+    .primary { fill: #FF6B00; }
+    .secondary { fill: #2C3E50; }
+    .palm { fill: #27AE60; }
+    .sand { fill: #F9E79F; }
+    .sea { fill: #3498DB; }
+    .sun { fill: #F39C12; }
+  </style>
+  
+  <!-- Background Sky -->
+  <rect fill="#85C1E9" x="0" y="0" width="512" height="350"/>
+  
+  <!-- Sun -->
+  <circle class="sun" cx="430" cy="70" r="40"/>
+  
+  <!-- Sea -->
+  <path class="sea" d="M0,350c0,0,80-30,160-30s160,30,240,30s112-30,112-30v162H0V350z"/>
+  
+  <!-- Sand Beach -->
+  <path class="sand" d="M0,350c0,0,80,30,200,30s200-30,312-30v50c-92,0-252,60-512,0V350z"/>
+  
+  <!-- Palm Tree 1 -->
+  <rect class="secondary" x="100" y="250" width="20" height="100"/>
+  <path class="palm" d="M110,250c0,0-40-20-60,10s20,40,20,40"/>
+  <path class="palm" d="M110,250c0,0,40-20,60,10s-20,40-20,40"/>
+  <path class="palm" d="M110,230c0,0,0-40,30-40s30,40,30,40"/>
+  
+  <!-- Palm Tree 2 -->
+  <rect class="secondary" x="400" y="280" width="15" height="70"/>
+  <path class="palm" d="M407,280c0,0-30-15-45,7s15,30,15,30"/>
+  <path class="palm" d="M407,280c0,0,30-15,45,7s-15,30-15,30"/>
+  <path class="palm" d="M407,260c0,0,0-30,22-30s22,30,22,30"/>
+  
+  <!-- Beach Umbrella -->
+  <path class="primary" d="M300,350l-30-60h60Z"/>
+  <rect class="secondary" x="298" y="290" width="4" height="60"/>
+  
+  <!-- Beach Ball -->
+  <circle fill="white" cx="250" cy="340" r="15"/>
+  <path class="primary" d="M250,325a15,15 0 0,0 0,30"/>
+  <path class="secondary" d="M265,340a15,15 0 0,0-30,0"/>
+</svg>

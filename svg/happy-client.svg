@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100" height="100">
+  <style>
+    .primary { fill: #FF6B00; }
+    .secondary { fill: #2C3E50; }
+    .skin { fill: #FDEBD0; }
+    .suit { fill: #2E4053; }
+    .rating { fill: #F1C40F; }
+  </style>
+  
+  <!-- Background Circle -->
+  <circle fill="#ECF0F1" cx="256" cy="256" r="240"/>
+  
+  <!-- People Group -->
+  
+  <!-- Person 1 (Happy Client) -->
+  <circle class="skin" cx="160" cy="200" r="40"/>
+  <path class="secondary" d="M160,240v80"/>
+  <path class="suit" d="M120,280h80v100H120z"/>
+  <circle fill="#FFFFFF" cx="140" cy="190" r="8"/>
+  <circle fill="#FFFFFF" cx="180" cy="190" r="8"/>
+  <circle fill="#2C3E50" cx="140" cy="190" r="4"/>
+  <circle fill="#2C3E50" cx="180" cy="190" r="4"/>
+  <path class="primary" d="M140,220c0,0,10,10,40,0" fill="none" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Person 2 -->
+  <circle class="skin" cx="256" cy="220" r="40"/>
+  <path class="secondary" d="M256,260v80"/>
+  <path class="primary" d="M216,300h80v80h-80z"/>
+  <circle fill="#FFFFFF" cx="236" cy="210" r="8"/>
+  <circle fill="#FFFFFF" cx="276" cy="210" r="8"/>
+  <circle fill="#2C3E50" cx="236" cy="210" r="4"/>
+  <circle fill="#2C3E50" cx="276" cy="210" r="4"/>
+  <path class="primary" d="M236,240c0,0,10,10,40,0" fill="none" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Person 3 -->
+  <circle class="skin" cx="350" cy="200" r="40"/>
+  <path class="secondary" d="M350,240v80"/>
+  <path class="suit" d="M310,280h80v100h-80z"/>
+  <circle fill="#FFFFFF" cx="330" cy="190" r="8"/>
+  <circle fill="#FFFFFF" cx="370" cy="190" r="8"/>
+  <circle fill="#2C3E50" cx="330" cy="190" r="4"/>
+  <circle fill="#2C3E50" cx="370" cy="190" r="4"/>
+  <path class="primary" d="M330,220c0,0,10,10,40,0" fill="none" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Rating Stars -->
+  <g transform="translate(150, 360)">
+    <polygon class="rating" points="12,0 15,9 24,9 18,15 21,24 12,18 3,24 6,15 0,9 9,9"/>
+    <polygon class="rating" points="42,0 45,9 54,9 48,15 51,24 42,18 33,24 36,15 30,9 39,9"/>
+    <polygon class="rating" points="72,0 75,9 84,9 78,15 81,24 72,18 63,24 66,15 60,9 69,9"/>
+    <polygon class="rating" points="102,0 105,9 114,9 108,15 111,24 102,18 93,24 96,15 90,9 99,9"/>
+    <polygon class="rating" points="132,0 135,9 144,9 138,15 141,24 132,18 123,24 126,15 120,9 129,9"/>
+  </g>
+  
+  <!-- Text Bubble -->
+  <path class="secondary" d="M400,150c0,22-18,40-40,40H210l-30,20v-20h-20c-22,0-40-18-40-40v-60c0-22,18-40,40-40h200c22,0,40,18,40,40V150z"/>
+  <text x="190" y="120" fill="#FFFFFF" font-family="Arial" font-weight="bold" font-size="16">Great Service!</text>
+  
+  <!-- 2000+ Indicator -->
+  <path class="primary" d="M350,90c0,11-9,20-20,20h-30l-15,10v-10h-10c-11,0-20-9-20-20V50c0-11,9-20,20-20h55c11,0,20,9,20,20V90z"/>
+  <text x="270" y="70" fill="#FFFFFF" font-family="Arial" font-weight="bold" font-size="14">2000+</text>
+</svg>

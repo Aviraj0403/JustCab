@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100" height="100">
+  <style>
+    .primary { fill: #FF6B00; }
+    .secondary { fill: #2C3E50; }
+    .glass { fill: #D6EAF8; opacity: 0.8; }
+    .ground { fill: #95A5A6; }
+  </style>
+  
+  <!-- Airport Terminal Building -->
+  <rect class="secondary" x="156" y="150" width="200" height="250" rx="5" ry="5"/>
+  
+  <!-- Glass Windows -->
+  <rect class="glass" x="176" y="180" width="160" height="120" rx="2" ry="2"/>
+  
+  <!-- Terminal Roof -->
+  <path class="primary" d="M146,150h220l-20-30H166Z"/>
+  
+  <!-- Control Tower -->
+  <rect class="secondary" x="326" y="100" width="40" height="150"/>
+  <circle class="glass" cx="346" cy="90" r="30"/>
+  
+  <!-- Ground/Runway -->
+  <rect class="ground" x="50" y="400" width="412" height="30"/>
+  
+  <!-- Runway Markings -->
+  <rect fill="white" x="80" y="410" width="40" height="10"/>
+  <rect fill="white" x="150" y="410" width="40" height="10"/>
+  <rect fill="white" x="220" y="410" width="40" height="10"/>
+  <rect fill="white" x="290" y="410" width="40" height="10"/>
+  <rect fill="white" x="360" y="410" width="40" height="10"/>
+  
+  <!-- Airplane -->
+  <path class="primary" d="M120,320l30-15h100l40,15l-40,15H150Z"/>
+  <rect class="secondary" x="220" y="305" width="10" height="30"/>
+  <path class="secondary" d="M150,320l-15-30h40l15,30Z"/>
+  <path class="primary" d="M200,290l-10-40l20-5l20,45Z"/>
+</svg>

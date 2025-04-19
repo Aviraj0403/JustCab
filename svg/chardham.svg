@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100" height="100">
+  <style>
+    .primary { fill: #FF6B00; }
+    .secondary { fill: #2C3E50; }
+    .mountains { fill: #95A5A6; }
+    .snow { fill: #FDFEFE; }
+    .temple { fill: #E67E22; }
+    .temple-detail { fill: #784212; }
+    .sky { fill: #AED6F1; }
+  </style>
+  
+  <!-- Sky Background -->
+  <rect class="sky" x="0" y="0" width="512" height="512"/>
+  
+  <!-- Mountains -->
+  <path class="mountains" d="M0,350l100-150l80,100l120-180l110,130l102,100H0z"/>
+  <path class="snow" d="M100,200l20-30l30,40l-20,20z"/>
+  <path class="snow" d="M300,120l30-40l20,30l-30,30z"/>
+  
+  <!-- Temple 1 (Kedarnath) -->
+  <rect class="temple" x="80" y="280" width="80" height="70"/>
+  <path class="temple" d="M70,280h100l-50-40z"/>
+  <rect class="temple-detail" x="110" y="300" width="20" height="50"/>
+  
+  <!-- Temple 2 (Badrinath) -->
+  <rect class="temple" x="220" y="250" width="80" height="100"/>
+  <path class="temple" d="M210,250h100l-50-40z"/>
+  <rect class="temple-detail" x="250" y="280" width="20" height="70"/>
+  
+  <!-- Temple 3 (Gangotri) -->
+  <rect class="temple" x="360" y="270" width="70" height="80"/>
+  <path class="temple" d="M350,270h90l-45-30z"/>
+  <rect class="temple-detail" x="385" y="300" width="20" height="50"/>
+  
+  <!-- Temple 4 (Yamunotri) - Small in background -->
+  <rect class="temple" x="170" y="230" width="40" height="40"/>
+  <path class="temple" d="M165,230h50l-25-20z"/>
+  
+  <!-- Sacred River -->
+  <path class="primary" d="M0,410c50-20,100,20,150,0s100-20,150,0s100,20,150,0v102H0V410z"/>
+  
+  <!-- Om Symbol -->
+  <path class="secondary" d="M256,160c-10,0-18,8-18,18s8,18,18,18s18-8,18-18S266,160,256,160z M256,170c4.4,0,8,3.6,8,8s-3.6,8-8,8s-8-3.6-8-8S251.6,170,256,170z"/>
+  <path class="secondary" d="M256,135c-24,0-43,19-43,43s19,43,43,43s43-19,43-43S280,135,256,135z M256,145c18,0,33,15,33,33s-15,33-33,33s-33-15-33-33S238,145,256,145z"/>
+  <path class="secondary" d="M275,185c-5-8-13-13-22-13v10c5,0,10,3,14,8L275,185z"/>
+</svg>

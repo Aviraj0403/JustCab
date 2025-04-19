@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100" height="100">
+  <style>
+    .car-body { fill: #FF6B00; }
+    .car-details { fill: #2C3E50; }
+    .window { fill: #D6EAF8; }
+    .light { fill: #F4D03F; }
+    .wheel { fill: #17202A; }
+    .wheel-cover { fill: #CACFD2; }
+  </style>
+  
+  <!-- Car Body -->
+  <path class="car-body" d="M460,310H52c-11.046,0-20-8.954-20-20v-60c0-44.112,35.888-80,80-80h288c44.112,0,80,35.888,80,80v60 C480,301.046,471.046,310,460,310z"/>
+  
+  <!-- Car Top -->
+  <path class="car-body" d="M380,150H132c-11.046,0-20-8.954-20-20v-40c0-11.046,8.954-20,20-20h248c11.046,0,20,8.954,20,20v40 C400,141.046,391.046,150,380,150z"/>
+  
+  <!-- Windows -->
+  <rect class="window" x="132" y="90" width="248" height="60" rx="10" ry="10"/>
+  
+  <!-- Wheels -->
+  <circle class="wheel" cx="120" cy="310" r="40"/>
+  <circle class="wheel" cx="392" cy="310" r="40"/>
+  
+  <!-- Wheel Covers -->
+  <circle class="wheel-cover" cx="120" cy="310" r="15"/>
+  <circle class="wheel-cover" cx="392" cy="310" r="15"/>
+  
+  <!-- Front Light -->
+  <circle class="light" cx="460" cy="270" r="10"/>
+  
+  <!-- Back Light -->
+  <circle class="light" cx="52" cy="270" r="10"/>
+  
+  <!-- Taxi Sign -->
+  <rect class="car-details" x="241" y="70" width="30" height="20" rx="5" ry="5"/>
+  
+  <!-- Door Lines -->
+  <line class="car-details" x1="200" y1="150" x2="200" y2="310" stroke="#2C3E50" stroke-width="4"/>
+  <line class="car-details" x1="312" y1="150" x2="312" y2="310" stroke="#2C3E50" stroke-width="4"/>
+  
+  <!-- Checker Pattern (Taxi) -->
+  <rect fill="#FFFFFF" x="420" y="220" width="15" height="15"/>
+  <rect fill="#2C3E50" x="435" y="220" width="15" height="15"/>
+  <rect fill="#2C3E50" x="420" y="235" width="15" height="15"/>
+  <rect fill="#FFFFFF" x="435" y="235" width="15" height="15"/>
+</svg>
