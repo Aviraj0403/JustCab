@@ -103,16 +103,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Format message for WhatsApp without backend processing
-            const whatsAppMessage = `*New Booking Enquiry*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Travel Date:* ${travelDate}%0A*Trip Type:* ${tripType}%0A*Message:* ${message || 'N/A'}`;
+            const whatsAppMessage = `*New Booking Enquiry From JustCab*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Travel Date:* ${travelDate}\n*Trip Type:* ${tripType}\n*Message:* ${message || 'N/A'}`;
+            const encodedMessage = encodeURIComponent(whatsAppMessage);
             
             // Get admin phone (replace with your number)
             const adminPhone = "916200594193";  // Replace with your number with country code
             
-            // Create WhatsApp link directly
-            const whatsappUrl = `https://wa.me/${adminPhone}?text=${whatsAppMessage}`;
-            
-            // Set the WhatsApp link
+            const whatsappUrl = `https://wa.me/${adminPhone}?text=${encodedMessage}`;
+
+            // Set link and auto open in new tab
             whatsappLink.href = whatsappUrl;
+            window.open(whatsappUrl, '_blank');
             
             // Show success message
             enquiryForm.style.display = 'none';
