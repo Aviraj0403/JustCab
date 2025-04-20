@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const encodedMessage = encodeURIComponent(whatsAppMessage);
             
             // Get admin phone (replace with your number)
-            const adminPhone = "916200594193";  // Replace with your number with country code
+            const adminPhone = "917290885949";  // Replace with your number with country code
             
             const whatsappUrl = `https://wa.me/${adminPhone}?text=${encodedMessage}`;
 

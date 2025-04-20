@@ -419,12 +419,43 @@ header.scrolled .bar {
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.stat-value::after {
+    content: '+';
+    font-size: 1.5rem;
+    position: relative;
+    top: -5px;
+    margin-left: 2px;
+}
+
+.stat-value.counter-complete {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+    animation: pulse 0.5s ease-in-out;
 }
 
 .stat-label {
     font-size: 1rem;
     color: var(--text-light);
     font-weight: 500;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Enquiry Section */
@@ -486,12 +517,12 @@ header.scrolled .bar {
 }
 
 .form-success {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--white);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -500,9 +531,13 @@ header.scrolled .bar {
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+    z-index: 9999;
+    padding: 20px; /* Add padding for smaller screens */
+    box-sizing: border-box;
 }
 
 .form-success.active {
+    background-color: var(--primary-color);
     opacity: 1;
     visibility: visible;
 }
@@ -510,26 +545,67 @@ header.scrolled .bar {
 .success-content {
     text-align: center;
     padding: 2rem;
+    color: white;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .success-content i {
-    font-size: 4rem;
-    color: #4CAF50;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
 }
 
 .success-content h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
 .success-content p {
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 10px;
 }
 
 .success-content a,
 .success-content button {
     margin: 0.5rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .success-content {
+        padding: 1.5rem;
+    }
+
+    .success-content i {
+        font-size: 3rem;
+    }
+
+    .success-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .success-content p {
+        font-size: 0.95rem;
+    }
+
+    .success-content a,
+    .success-content button {
+        font-size: 0.95rem;
+        padding: 10px 16px;
+    }
 }
 
 .enquiry-benefits {
@@ -742,6 +818,12 @@ footer {
 }
 
 /* Media Queries */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .hero-content {
         flex-direction: column;
@@ -750,6 +832,7 @@ footer {
     
     .hero-text {
         margin-bottom: 3rem;
+        max-width: 100%;
     }
     
     .hero-buttons {
@@ -762,10 +845,32 @@ footer {
     
     .about-image {
         margin-bottom: 3rem;
+        max-width: 100%;
+    }
+    .about-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px; 
     }
     
     .enquiry-content {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .enquiry-form-container,
+    .enquiry-benefits {
+        flex: 1 1 48%;
+    }
+    
+    /* Stack vertically on smaller screens */
+    @media (max-width: 768px) {
+        .enquiry-form-container,
+        .enquiry-benefits {
+            flex: 1 1 100%;
+        }
     }
     
     .stats-container {
@@ -775,6 +880,10 @@ footer {
     .stat-item {
         flex: 0 0 50%;
         margin-bottom: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -844,6 +953,18 @@ footer {
     .footer-content {
         grid-template-columns: 1fr;
     }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-section {
+        padding: 150px 0 80px;
+    }
+    
+    .section-header h2:after {
+        width: 40px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -853,15 +974,66 @@ footer {
     
     .hero-buttons {
         flex-direction: column;
+        width: 100%;
     }
     
     .hero-buttons .btn {
         margin-bottom: 1rem;
+        width: 100%;
     }
     
     .success-content .btn {
         display: block;
         width: 100%;
         margin: 0.5rem 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .services-section, .about-section, .enquiry-section {
+        padding: 60px 0;
+    }
+    
+    .cta-section {
+        padding: 40px 0;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+        padding: 10px;
+    }
+}
+
+/* Fix for extremely small screens */
+@media screen and (max-width: 375px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+    
+    .enquiry-form-container {
+        padding: 1.5rem;
     }
 }
